@@ -1,0 +1,12 @@
+~/.gitconfig:
+# common and fallback configurations
+[user]
+    name = Yorke Rhodes
+    email = yorkerhodesiv@gmail.com
+[core]
+    sshCommand = ssh -i ~/.ssh/id_rsa
+[color]
+    ui = auto
+# conditional configurations for celo repos
+[includeIf “gitdir:~/celo/”]
+    email = yorhodes@cLabs.co
