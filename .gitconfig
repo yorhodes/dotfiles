@@ -11,4 +11,4 @@
     defaultBranch = trunk
 # conditional configurations for celo repos
 [includeIf “gitdir:~/celo/”]
-    email = yorhodes@cLabs.co
+    path = "~/.gitconfig.celo"
