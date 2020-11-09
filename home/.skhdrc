@@ -31,6 +31,9 @@ shift + alt - l : yabai -m window --warp east
 # shift + alt - 5 : yabai -m window --space 5 && yabai -m space --focus 5
 # shift + alt - 6 : yabai -m window --space 6 && yabai -m space --focus 6
 
+# toggle window split type
+alt - e : yabai -m window --toggle split
+
 # Resize windows
 lctrl + alt - h : \
     yabai -m window --resize left:-20:0 ; \
