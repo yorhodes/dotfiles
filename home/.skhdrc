@@ -6,7 +6,7 @@
 # fn + lalt - 2 : "${HOME}"/.config/yabai/scripts/show_mem.sh
 # fn + lalt - 3 : "${HOME}"/.config/yabai/scripts/show_bat.sh
 # fn + lalt - 4 : "${HOME}"/.config/yabai/scripts/show_disk.sh
-# fn + lalt - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh
+# fn + lalt - 5 : "${HOME}"/.config/yabai/scripts/show_song.sh˙
 
 # Navigation
 alt - h : yabai -m window --focus west || yabai -m display --focus west
@@ -50,7 +50,7 @@ lctrl + alt - l : \
 
 # Float and center window
 # shift + alt - c : yabai -m window --toggle float;\
-                  yabai -m window --grid 4:4:1:1:2:2
+#                  yabai -m window --grid 4:4:1:1:2:2
 
 # Equalize size of windows
 # lctrl + alt - 0 : yabai -m space --balance
@@ -77,9 +77,9 @@ shift + alt - space : yabai -m window --toggle float
 
 # Restart Yabai
 # shift + lctrl + alt - r : 
-    /usr/bin/env osascript <<< \
-        "display notification \"Restarting Yabai\" with title \"Yabai\""; \
-    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+#    /usr/bin/env osascript <<< \
+#        "display notification \"Restarting Yabai\" with title \"Yabai\""; \
+#    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
