@@ -10,5 +10,5 @@
 [init]
     defaultBranch = trunk
 # conditional configurations for celo repos
-[includeIf “gitdir:~/celo/”]
-    path = "~/.gitconfig.celo"
+[includeIf "gitdir:~/celo/"]
+    path = ~/.gitconfig.celo
