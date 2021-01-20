@@ -7,8 +7,10 @@ running Catalina [10.15.7](https://support.apple.com/kb/DL2051?locale=en_US) on 
 
 using 
 1. [homesick](https://github.com/technicalpickles/homesick) for dotfile management
-2. [yabai](https://github.com/koekeishiya/yabai) for window management
-3. [simple-bar](https://github.com/Jean-Tinland/simple-bar) as an [Übersicht](https://github.com/felixhageloh/uebersicht) status bar
+2. [skhd](https://github.com/koekeishiya/skhd) as a hotkey daemon
+3. [yabai](https://github.com/koekeishiya/yabai) for window management
+4. [simple-bar](https://github.com/Jean-Tinland/simple-bar) as an [Übersicht](https://github.com/felixhageloh/uebersicht) status bar
+5. [Aerial](https://github.com/JohnCoates/Aerial) as a screensaver
 
 ## hardware
 
