@@ -20,4 +20,4 @@ clicking on an [Anker wireless vertical ergonomic mouse](https://www.amazon.com/
 
 sitting on an [ƛutonomous ErgoChair 2](https://www.autonomous.ai/office-chairs/ergonomic-chair?option20=54) in front of an [ƛutonomous SmartDesk 2](https://www.autonomous.ai/standing-desks/smartdesk-2-home?option1=1&option2=7&option16=36&option17=1881)
 
-doomscrolling on a [OnePlus 8T](https://www.oneplus.com/8t]
+doomscrolling on a [OnePlus 8T](https://www.oneplus.com/8t)
