@@ -51,10 +51,6 @@ alt + cmd - h : yabai -m space --focus prev || yabai -m space --focus last
 
 # Float
 alt - space : yabai -m window --toggle float
-# alt + shift - h : yabai -m window --move rel:-20:0
-# alt + shift - l : yabai -m window --move rel:20:0
-# alt + shift - j : yabai -m window --move rel:0:-20
-# alt + shift - k : yabai -m window --move rel:0:20
 
 # Swap
 alt + shift - h : yabai -m window --warp west || \
@@ -70,10 +66,10 @@ alt - e : yabai -m window --toggle split
 alt - f : yabai -m window --toggle zoom-fullscreen
 alt + ctrl - f : yabai -m window --toggle native-fullscreen
 
-ctrl + alt - h : yabai -m window --resize left:-20:0 && yabai -m window --resize right:-20:0
-ctrl + alt - j : yabai -m window --resize bottom:0:20 && yabai -m window --resize top:0:20
-ctrl + alt - k : yabai -m window --resize top:0:-20 && yabai -m window --resize bottom:0:-20
-ctrl + alt - l : yabai -m window --resize right:20:0 && yabai -m window --resize left:20:0
+ctrl + alt - h : yabai -m window --resize left:-20:0 || yabai -m window --resize right:-20:0
+ctrl + alt - j : yabai -m window --resize bottom:0:20 || yabai -m window --resize top:0:20
+ctrl + alt - k : yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:0:-20
+ctrl + alt - l : yabai -m window --resize right:20:0 || yabai -m window --resize left:20:0
 
 # Float and center window
 # shift + alt - c : yabai -m window --toggle float; \
@@ -85,6 +81,12 @@ ctrl + alt - l : yabai -m window --resize right:20:0 && yabai -m window --resize
 ## Space
 alt + cmd - n : yabai -m space --create && yabai -m window yabai -m space --focus next
 alt + cmd - d : yabai -m space --destroy && yabai -m space --focus prev
+
+alt + cmd + shift - h : yabai -m space --query prev
+# yabai -m window --space 
+# alt + cmd + shift - j : yabai -m window --space
+# alt + cmd + shift - k : yabai -m window --space
+# alt + cmd + shift - l : yabai -m window --space
 
 # Enable / Disable gaps in current workspace
 alt + ctrl - g : yabai -m space --toggle padding; yabai -m space --toggle gap
