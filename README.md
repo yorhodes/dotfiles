@@ -1,5 +1,7 @@
 # dotfiles
 
+config my life
+
 ## software
 running Catalina [10.15.7](https://support.apple.com/kb/DL2051?locale=en_US) on a 2019 macbook pro
 
