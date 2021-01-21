@@ -1,11 +1,7 @@
 #!/usr/bin/env sh
 
 # status bar
-yabai -m config external_bar all:28:0
-
-# TODO: use this for cool status bar
-# IDEA: virtual display layout, partitioned by space
-# yabai -m query --windows | jq '.[] | .title,.app,.space,.display'
+yabai -m config external_bar all:32:0
 
 # global settings
 yabai -m config mouse_follows_focus          on
@@ -40,13 +36,13 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10
-yabai -m config bottom_padding               10
-yabai -m config left_padding                 10
-yabai -m config right_padding                10
+yabai -m config top_padding                  5
+yabai -m config bottom_padding               5
+yabai -m config left_padding                 5
+yabai -m config right_padding                5
 yabai -m config window_gap                   5
 
-# float system preferences
+# float specific apps
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
@@ -55,6 +51,7 @@ yabai -m rule --add app="^WhatsApp$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^Android Messages$" manage=off
 yabai -m rule --add app="^Signal$" manage=off
+yabai -m rule --add app="^Übersicht$" manage=off
 
 # Refresh spaces widget on space change
 yabai -m signal --add event=space_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
