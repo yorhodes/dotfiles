@@ -29,6 +29,7 @@
 alt + ctrl - c : "${HOME}"/.config/scripts/show_cpu.sh
 alt + ctrl - m : "${HOME}"/.config/scripts/show_mem.sh
 alt + ctrl - b : "${HOME}"/.config/scripts/show_bat.sh
+alt + ctrl - t : "${HOME}"/.config/scripts/toggle_theme.sh
 
 # alt - 4 : "${HOME}"/.config/scripts/show_disk.sh
 # alt - 5 : "${HOME}"/.config/scripts/show_song.sh

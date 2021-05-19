@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/yorhodes/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -76,7 +73,11 @@ plugins=(
     ripgrep
     vscode
     zsh-autosuggestions
+    # yabai-zsh-completions
 )
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/yorhodes/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,6 +93,20 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='code'
+fi
+
+# from https://apas.gr/2018/11/dark-mode-macos-safari-iterm-vim/
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    refresh_iterm_theme() {
+        val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
+        if [[ $val == "Dark" ]]; then
+            echo -ne "\033]50;SetProfile=Dark\a"
+        else
+            echo -ne "\033]50;SetProfile=Light\a"
+        fi
+    }
+
+    refresh_iterm_theme
 fi
 
 # Compilation flags
@@ -112,7 +127,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export PATH=/Users/yorhodes/.nvm/versions/node/v10.19.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/yorhodes/.cargo/bin/:~/.cargo/bin/
+export PATH=$PATH:/Users/yorhodes/.nvm/versions/node/v10.19.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/yorhodes/.cargo/bin/:~/.cargo/bin/
+export PATH=$PATH:"/Applications/CMake.app/Contents/bin":"$PATH"
+
 
 export PATH=$PATH:/Users/yorhodes/Library/Python/3.7/bin
 
@@ -120,3 +137,4 @@ export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
