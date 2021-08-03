@@ -3,7 +3,7 @@
 config my life
 
 ## software
-running Catalina [10.15.7](https://support.apple.com/kb/DL2051?locale=en_US) on a 2019 macbook pro
+running Big Sur [11.5.1] on a 2019 macbook pro
 
 using 
 1. [homesick](https://github.com/technicalpickles/homesick) for dotfile management
@@ -25,3 +25,5 @@ clicking on an [Anker wireless vertical ergonomic mouse](https://www.amazon.com/
 sitting on an [ƛutonomous ErgoChair 2](https://www.autonomous.ai/office-chairs/ergonomic-chair?option20=54) in front of an [ƛutonomous SmartDesk 2](https://www.autonomous.ai/standing-desks/smartdesk-2-home?option1=1&option2=7&option16=36&option17=1881)
 
 doomscrolling on a [OnePlus 8T](https://www.oneplus.com/8t)
+
+tapping on a [iPad Air](https://www.apple.com/shop/buy-ipad/ipad-air)
