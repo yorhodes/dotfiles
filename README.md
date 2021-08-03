@@ -3,7 +3,7 @@
 config my life
 
 ## software
-running Big Sur [11.5.1] on a 2019 macbook pro
+running Big Sur 11.5.1 on a 2019 macbook pro
 
 using 
 1. [homesick](https://github.com/technicalpickles/homesick) for dotfile management
