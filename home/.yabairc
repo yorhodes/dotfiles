@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
 # status bar
 yabai -m config external_bar all:33:0
 
@@ -13,10 +16,10 @@ yabai -m config window_topmost               off
 yabai -m config window_opacity               on
 # yabai -m config window_opacity_duration      1.0
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.90
+yabai -m config normal_window_opacity        0.85
 
 # modify window shadows (default: on, options: on, off, float)
-yabai -m config window_shadow                off
+yabai -m config window_shadow                on
 
 # window border (default: off)
 yabai -m config window_border                off
@@ -36,46 +39,14 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  3
-yabai -m config bottom_padding               3
-yabai -m config left_padding                 4
-yabai -m config right_padding                4
-yabai -m config window_gap                   3
+yabai -m config bottom_padding               0
+yabai -m config top_padding                  5
+yabai -m config left_padding                 5
+yabai -m config right_padding                5
+yabai -m config window_gap                   5
 
 # float specific apps
-yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^Messages$" manage=off
-yabai -m rule --add app="^Activity Monitor$" manage=off
-yabai -m rule --add app="^WhatsApp$" manage=off
-yabai -m rule --add app="^Telegram$" manage=off
-yabai -m rule --add app="^Android Messages$" manage=off
-yabai -m rule --add app="^Signal$" manage=off
-yabai -m rule --add app="^Übersicht$" manage=off
-
-# Refresh spaces widget on space change
-yabai -m signal --add event=space_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-# Refresh spaces widget on display focus change
-yabai -m signal --add event=display_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-# Refresh process widget on space change
-yabai -m signal --add event=space_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-
-# Refresh process widget on when focused application changes
-yabai -m signal --add event=window_focused action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh spaces widget on when focused application changes
-yabai -m signal --add event=window_focused action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-
-# Refresh process widget on when focused application changes
-yabai -m signal --add event=application_front_switched action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh spaces widget on when focused application changes
-yabai -m signal --add event=application_front_switched action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-
-# Refresh process widget on when an application window is closed
-yabai -m signal --add event=window_destroyed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
-# Refresh spaces widget on when an application window is closed
-yabai -m signal --add event=window_destroyed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-spaces-jsx\"'"
-
-# Refresh process widget when current window title changes
-yabai -m signal --add event=window_title_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
+MATCH="^(System Preferences)|(Archive Utility)|(Finder)|(Messages)|(Contacts)|(Activity Monitor)|(WhatsApp)|(Telegram)|(Android Messages)|(Signal)|(Übersicht)|(Calendar)$"
+yabai -m rule --add app="$MATCH" manage=off sticky=on layer=above
 
 echo "yabai configuration loaded..."
