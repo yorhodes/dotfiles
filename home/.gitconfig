@@ -12,3 +12,12 @@
 # conditional configurations for celo repos
 [includeIf "gitdir:~/celo/"]
     path = ~/.gitconfig.celo
+[pull]
+	ff = only
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
+[push]
+	default = current
