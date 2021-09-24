@@ -26,10 +26,28 @@
 # resize < meh - space ; default
 
 # System
-alt + ctrl - c : "${HOME}"/.config/scripts/show_cpu.sh
-alt + ctrl - m : "${HOME}"/.config/scripts/show_mem.sh
-alt + ctrl - b : "${HOME}"/.config/scripts/show_bat.sh
-alt + ctrl - t : "${HOME}"/.config/scripts/toggle_theme.sh
+# alt + ctrl - t : toggle system theme
+alt + ctrl - t : osascript -e osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
+
+# alt - F1 (0x7A) : mute sound
+alt - 0x7A : osascript -e 'set volume output muted not (output muted of (get volume settings))'
+# alt - F2 (0x78) : lower sound
+alt - 0x78 : osascript -e 'set volume output volume (output volume of (get volume settings)) - 10'
+# alt - F3 (0x63) : raise sound
+alt - 0x78 : osascript -e 'set volume output volume (output volume of (get volume settings)) + 10'
+# alt - F4 (0x76) : rewind
+alt - 0x60 : osascript -e 'tell application "Spotify" to previous track'
+# alt - F5 (0x60) : play/pause
+alt - 0x60 : osascript -e 'tell application "Spotify" to playpause'
+# alt - F6 (0x61) : fast-forward
+alt - 0x61 : osascript -e 'tell application "Spotify" to next track'
+# alt - F10 (0x6D) : print screen
+alt - 0x6D : screencapture -p -i -U
+# alt - F11 (0x67) : lock screen
+alt - 0x67 : open -a ScreenSaverEngine
+
+# F12 = 0x6F
+# CAPS_LOCK = 0x39
 
 # alt - 4 : "${HOME}"/.config/scripts/show_disk.sh
 # alt - 5 : "${HOME}"/.config/scripts/show_song.sh
