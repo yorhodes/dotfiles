@@ -21,8 +21,8 @@
 # toggle system theme
 cmd + alt - t : osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to not dark mode'
 
-# lock screen
-cmd + alt - l : open -a ScreenSaverEngine
+# screensaver
+cmd + alt - s : open -a ScreenSaverEngine
 
 # print screen
 cmd + alt - p : screencapture -p -i -U
@@ -57,6 +57,8 @@ alt - k : yabai -m window --focus north || yabai -m display --focus north
 alt - l : yabai -m window --focus east  || yabai -m display --focus east
 
 ## Space
+alt + cmd - n : yabai -m space --create
+alt + cmd - d : yabai -m space --destroy
 alt + cmd - l : yabai -m space --focus next || yabai -m space --focus first
 alt + cmd - h : yabai -m space --focus prev || yabai -m space --focus last
 
@@ -79,7 +81,7 @@ alt + shift - l : yabai -m window --warp east || \
 
 alt - e : yabai -m window --toggle split
 alt - f : yabai -m window --toggle zoom-fullscreen
-alt + ctrl - f : yabai -m window --toggle native-fullscreen
+alt + cmd - f : yabai -m window --toggle native-fullscreen
 
 # ctrl + alt + (ghjkl;) => resize;
 ctrl + alt - h : yabai -m window --resize left:-50:0 || yabai -m window --resize right:-50:0
@@ -96,11 +98,6 @@ ctrl + alt - 0x29 : yabai -m window --resize right:200:0 || yabai -m window --re
 
 # Equalize size of windows
 # lctrl + alt - 0 : yabai -m space --balance
-
-## Space
-
-alt + cmd - n : yabai -m space --create
-alt + cmd - d : yabai -m space --destroy
 
 # curr_ aliases from ~/.zshrc
 
