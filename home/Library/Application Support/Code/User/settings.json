@@ -1,0 +1,107 @@
+{
+    "workbench.colorCustomizations": {},
+    "[solidity]": {
+        "editor.defaultFormatter": "JuanBlanco.solidity"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "git.ignoreLegacyWarning": true,
+    "git.autofetch": true,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Fira Code", 
+    "editor.fontLigatures": true,
+    "npm.packageManager": "yarn",
+    "zenMode.hideLineNumbers": false,
+    "editor.multiCursorModifier": "alt",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+    },
+    "zenMode.hideTabs": false,
+    "workbench.editor.showTabs": true,
+    "workbench.colorTheme": "Community Material Theme Lighter High Contrast",
+    "materialTheme.accent": "Bright Teal",
+    "editor.mouseWheelZoom": true,
+    "files.exclude": {
+        "**/*.js.map": true,
+        "**/*.js": {"when": "$(basename).ts"}
+    },
+    "editor.fontSize": 16,
+    "editor.suggestSelection": "first",
+    "window.restoreWindows": "none",
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+        // Optional: Disable snippets, as they conflict with completion ranking.
+        "editor.snippetSuggestions": "none",
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "gopls": {
+        // Add parameter placeholders when completing a function.
+        "usePlaceholders": true,
+
+        // If true, enable additional analyses with staticcheck.
+        // Warning: This will significantly increase memory usage.
+        "staticcheck": false,
+    },
+    "workbench.startupEditor": "readme",
+    "workbench.preferredDarkColorTheme": "Community Material Theme Darker High Contrast",
+    "workbench.preferredLightColorTheme": "Community Material Theme Lighter High Contrast",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "files.hotExit": "off",
+    "explorer.sortOrder": "mixed",
+    "explorer.incrementalNaming": "smart",
+    "files.associations": {
+        ".env*": "dotenv",
+        "*.sql": "sql-bigquery",
+        ".*rc": "shellscript"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "sql-formatter.uppercase": true,
+    "zenMode.fullScreen": false,
+    "zenMode.centerLayout": false,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.codeLensFontFamily": "Fira Code",
+    "diffEditor.renderSideBySide": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.sideBar.location": "right",
+    "go.toolsManagement.autoUpdate": true,
+    "rust-client.channel": "stable",
+    "window.autoDetectColorScheme": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.zoomLevel": -1,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterNames.enabled": "all"
+}
