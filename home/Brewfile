@@ -1,0 +1,12 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+brew "git"
+brew "neofetch"
+brew "ruby"
+cask "font-fira-code"
