@@ -3,20 +3,24 @@
 config my life
 
 ## software
-running Big Sur 11.5.1 on a 2019 macbook pro
 
-using 
-1. [homesick](https://github.com/technicalpickles/homesick) for dotfile management
-2. [skhd](https://github.com/koekeishiya/skhd) as a hotkey daemon
-3. [yabai](https://github.com/koekeishiya/yabai) for window management
-4. [simple-bar](https://github.com/Jean-Tinland/simple-bar) as an [Übersicht](https://github.com/felixhageloh/uebersicht) status bar
-5. [Aerial](https://github.com/JohnCoates/Aerial) as a screensaver
+![neofetch](./neofetch.png)
+
+[homesick](https://github.com/technicalpickles/homesick) for dotfile management
+
+[skhd](https://github.com/koekeishiya/skhd) as a hotkey daemon
+
+[simple-bar](https://github.com/Jean-Tinland/simple-bar) as an [Übersicht](https://github.com/felixhageloh/uebersicht) status bar
+
+[Aerial](https://github.com/JohnCoates/Aerial) as a screensaver
 
 ## hardware
 
 viewing 2 monitors
-1. [LG HDR WQHD Display horizontal 3440 x 1440](https://www.amazon.com/LG-34WN80C-B-inch-Connectivity-Compatibility/dp/B07YGZ7C1K/ref=sxts_sxwds-bia-wc-nc-drs1_0)
-2. [HP VH240a Display vertical 1080 x 1920](https://www.amazon.com/HP-23-8-inch-Adjustment-Speakers-VH240a/dp/B072M34RQC)
+
+[LG HDR WQHD Display horizontal 3440 x 1440](https://www.amazon.com/LG-34WN80C-B-inch-Connectivity-Compatibility/dp/B07YGZ7C1K/ref=sxts_sxwds-bia-wc-nc-drs1_0)
+
+[HP VH240a Display vertical 1080 x 1920](https://www.amazon.com/HP-23-8-inch-Adjustment-Speakers-VH240a/dp/B072M34RQC)
 
 typing on a [Vortex Race 3](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3917)
 
