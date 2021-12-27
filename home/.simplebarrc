@@ -2,16 +2,19 @@
     "global": {
         "theme": "auto",
         "floatingBar": true,
-        "noBarBg": false,
+        "noBarBg": true,
         "noColorInData": true,
         "bottomBar": false,
         "inlineSpacesOptions": false,
         "disableNotifications": false,
-        "backgroundColorAsForeground": false,
-        "font": "JetBrains Mono",
-        "fontSize": "10px",
-        "yabaiPath": "/usr/local/bin/yabai",
-        "shell": "bash",
+        "compactMode": true,
+        "widgetMaxWidth": "100px",
+        "spacesBackgroundColorAsForeground": false,
+        "widgetsBackgroundColorAsForeground": false,
+        "font": "FiraCode Nerd Font",
+        "fontSize": "11px",
+        "yabaiPath": "/opt/homebrew/bin/yabai",
+        "shell": "sh",
         "slidingAnimationPace": 4,
         "externalConfigFile": true
     },
@@ -29,13 +32,13 @@
         "exclusionsAsRegex": false,
         "displayAllSpacesOnAllScreens": false,
         "hideDuplicateAppsInSpaces": false,
-        "displayStickyWindowsSeparately": true,
+        "displayStickyWindowsSeparately": false,
         "hideEmptySpaces": false,
         "showOptionsOnHover": true,
-        "hideSpacesOptions": false
+        "switchSpacesWithoutYabai": false
     },
     "widgets": {
-        "processWidget": true,
+        "processWidget": false,
         "weatherWidget": true,
         "batteryWidget": true,
         "wifiWidget": true,
@@ -47,63 +50,100 @@
         "timeWidget": true,
         "keyboardWidget": false,
         "spotifyWidget": true,
-        "cryptoWidget": true,
+        "cryptoWidget": false,
+        "stockWidget": false,
         "musicWidget": false,
         "mpdWidget": false,
+        "dndWidget": false,
         "browserTrackWidget": false
     },
     "weatherWidgetOptions": {
+        "refreshFrequency": 1800000,
         "unit": "F",
         "hideLocation": false,
         "hideGradient": false,
-        "customLocation": "San Francisco"
-    },
-    "zoomWidgetOptions": {
-        "showVideo": false,
-        "showMic": false
+        "customLocation": ""
     },
     "batteryWidgetOptions": {
+        "refreshFrequency": 10000,
         "toggleCaffeinateOnClick": false,
         "caffeinateOption": ""
     },
     "networkWidgetOptions": {
+        "refreshFrequency": 20000,
         "networkDevice": "en0",
-        "toggleWifiOnClick": true
+        "toggleWifiOnClick": false
     },
     "vpnWidgetOptions": {
+        "refreshFrequency": 8000,
         "vpnConnectionName": "",
         "vpnShowConnectionName": false
     },
+    "zoomWidgetOptions": {
+        "refreshFrequency": 5000,
+        "showVideo": true,
+        "showMic": true
+    },
+    "soundWidgetOptions": {
+        "refreshFrequency": 20000
+    },
+    "micWidgetOptions": {
+        "refreshFrequency": 20000
+    },
+    "dateWidgetOptions": {
+        "refreshFrequency": 30000,
+        "shortDateFormat": true,
+        "locale": "en-UK",
+        "calendarApp": ""
+    },
     "timeWidgetOptions": {
+        "refreshFrequency": "60000",
         "hour12": true,
         "dayProgress": false,
         "showSeconds": false
     },
-    "dateWidgetOptions": {
-        "shortDateFormat": true,
-        "locale": "en-US",
-        "calendarApp": ""
+    "keyboardWidgetOptions": {
+        "refreshFrequency": 20000
     },
     "cryptoWidgetOptions": {
+        "refreshFrequency": 300000,
         "denomination": "usd",
-        "identifiers": "ethereum,celo",
-        "precision": 5,
-        "locale": "usd"
+        "identifiers": "bitcoin,ethereum,celo",
+        "precision": "5"
+    },
+    "stockWidgetOptions": {
+        "refreshFrequency": 900000,
+        "yahooFinanceApiKey": "YOUR_API_KEY",
+        "symbols": "AAPL,TSLA",
+        "showSymbol": true,
+        "showCurrency": true,
+        "showMarketPrice": true,
+        "showMarketChange": false,
+        "showMarketPercent": true,
+        "showColor": true
     },
     "spotifyWidgetOptions": {
+        "refreshFrequency": 10000,
         "showSpecter": false
     },
     "musicWidgetOptions": {
-        "showSpecter": false
+        "refreshFrequency": 10000,
+        "showSpecter": true
     },
     "mpdWidgetOptions": {
+        "refreshFrequency": 10000,
         "showSpecter": true,
         "mpdPort": "6600",
         "mpdHost": "127.0.0.1",
         "mpdFormatString": "%title%[ - %artist%]|[%file%]"
     },
+    "dndWidgetOptions": {
+        "refreshFrequency": 60000,
+        "showDndLabel": false
+    },
     "browserTrackWidgetOptions": {
-        "showSpecter": false
+        "refreshFrequency": 10000,
+        "showSpecter": true
     },
     "userWidgets": {
         "userWidgetsList": {}
