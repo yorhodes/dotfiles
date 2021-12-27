@@ -63,6 +63,7 @@ source $(brew --prefix nvm)/nvm.sh
 export ZSH="/Users/yorhodes/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -74,14 +75,9 @@ fi
 alias curr_space_index="yabai -m query --spaces --space | jq '.index - 1'"
 alias curr_display_space_indices="yabai -m query --spaces --display | jq '[.[] .index]'"
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/Users/yorhodes/.nvm/versions/node/v10.19.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/yorhodes/.cargo/bin/:~/.cargo/bin/
-export PATH=$PATH:"/Applications/CMake.app/Contents/bin":"$PATH"
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/.cargo/bin/
+export PATH=~/.pyenv/shims:$PATH
 
-export PATH=$PATH:/Users/yorhodes/Library/Python/3.7/bin
-
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-
-
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
