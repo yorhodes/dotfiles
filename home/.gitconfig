@@ -2,6 +2,7 @@
 [user]
     name = yorhodes
     email = yorkerhodesiv@gmail.com
+    signingkey = 8C6573483BF95681
 [core]
     sshCommand = ssh -i ~/.ssh/id_ed25519
     editor = code -w
@@ -23,3 +24,5 @@
 	colorMoved = zebra
 [push]
 	default = current
+[commit]
+    gpgsign = true
