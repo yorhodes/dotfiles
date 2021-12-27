@@ -6,15 +6,9 @@ config my life
 
 ![neofetch](./neofetch.png)
 
-[homesick](https://github.com/technicalpickles/homesick) for dotfile management
-
-[skhd](https://github.com/koekeishiya/skhd) as a hotkey daemon
-
-[simple-bar](https://github.com/Jean-Tinland/simple-bar) as an [Übersicht](https://github.com/felixhageloh/uebersicht) status bar
-
-[Aerial](https://github.com/JohnCoates/Aerial) as a screensaver
-
 ### installation
+
+Requires [homesick](https://github.com/technicalpickles/homesick).
 
 Download and run [install script](./install.sh)
 
