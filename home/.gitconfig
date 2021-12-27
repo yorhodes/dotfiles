@@ -12,6 +12,8 @@
 # conditional configurations for celo repos
 [includeIf "gitdir:~/celo/"]
     path = ~/.gitconfig.celo
+[includeIf "gitdir:~/gauntlet/"]
+    path = ~/.gitconfig.gauntlet
 [pull]
 	ff = only
 	rebase = true
@@ -21,8 +23,3 @@
 	colorMoved = zebra
 [push]
 	default = current
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
