@@ -13,7 +13,7 @@
     "git.ignoreLegacyWarning": true,
     "git.autofetch": true,
     "editor.minimap.enabled": false,
-    "editor.fontFamily": "Fira Code", 
+    "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontLigatures": true,
     "npm.packageManager": "yarn",
     "zenMode.hideLineNumbers": false,
@@ -27,7 +27,7 @@
     },
     "zenMode.hideTabs": false,
     "workbench.editor.showTabs": true,
-    "workbench.colorTheme": "Community Material Theme Lighter High Contrast",
+    "workbench.colorTheme": "Community Material Theme Darker",
     "materialTheme.accent": "Bright Teal",
     "editor.mouseWheelZoom": true,
     "files.exclude": {
