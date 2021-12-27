@@ -14,6 +14,10 @@ config my life
 
 [Aerial](https://github.com/JohnCoates/Aerial) as a screensaver
 
+### installation
+
+Download and run [install script](./install.sh)
+
 ## hardware
 
 viewing 2 monitors
