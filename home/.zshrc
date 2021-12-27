@@ -37,9 +37,6 @@ HEADLINE_GIT_CLEAN='✔'
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -58,6 +55,10 @@ plugins=(
     macos
 )
 
+export PATH=/opt/homebrew/bin:$PATH
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/yorhodes/.oh-my-zsh"
 
@@ -73,18 +74,14 @@ fi
 alias curr_space_index="yabai -m query --spaces --space | jq '.index - 1'"
 alias curr_display_space_indices="yabai -m query --spaces --display | jq '[.[] .index]'"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Users/yorhodes/.nvm/versions/node/v10.19.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/yorhodes/.cargo/bin/:~/.cargo/bin/
 export PATH=$PATH:"/Applications/CMake.app/Contents/bin":"$PATH"
 
-
 export PATH=$PATH:/Users/yorhodes/Library/Python/3.7/bin
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
