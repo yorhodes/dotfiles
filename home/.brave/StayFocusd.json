@@ -1,0 +1,46 @@
+{
+    "SYNC": {
+        "blacklist": {
+            "netflix.com": {},
+            "reddit.com": {},
+            "youtube.com": {}
+        },
+        "storageMap": {
+            "backup-1640624194918": 3,
+            "backup-1640624196476": 3,
+            "backup-1640624198586": 3,
+            "backup-1640624199603": 3,
+            "backup-1640624202463": 3,
+            "backupKeys": 3,
+            "blacklist": 2,
+            "disableUpdatePopup": 3,
+            "isUpdated": 3,
+            "outgoingLink": 3,
+            "previousVersion": 3,
+            "whitelist": 2
+        }
+    },
+    "LOCAL": {
+        "activeDays": "1|2|3|4|5",
+        "activeHours": "09:00|16:00",
+        "elapsedTime": 0,
+        "firstInstallAllowanceExpiration": 1640627724678,
+        "firstInstallDate": "Mon Dec 27 2021",
+        "lastReset": "2021-12-27",
+        "nuclearOptionSettings": {
+            "activeDays": []
+        },
+        "resetTime": "00:00",
+        "resetTimestamp": 1640667600000
+    },
+    "HTML5": {
+        "backup-1640624202463": "{\"activeDays\":\"1|2|3|4|5\",\"activeHours\":\"09:00|16:00\",\"activeHoursQueue\":null,\"blacklist\":{\"netflix.com\":{},\"reddit.com\":{},\"youtube.com\":{}},\"challengeRequired\":null,\"challengeText\":null,\"countdownForOutgoingLinks\":null,\"customStayFocusdMsg\":null,\"disableActivityMonitor\":null,\"disableSync\":null,\"disableUpdatePopup\":null,\"firstInstallDate\":\"Mon Dec 27 2021\",\"firstInstallAllowanceExpiration\":1640627724678,\"hideAllowSiteLink\":null,\"hideInfoBar\":null,\"maxTimeAllowed\":null,\"notificationSettings\":null,\"nuclearOptionSettings\":{\"activeDays\":[]},\"productivityBypass\":null,\"resetTimeQueue\":null,\"resetTimestamp\":1640667600000,\"resetTime\":\"00:00\",\"whitelist\":null}",
+        "backup-1640624196476": "{\"activeDays\":\"1|2|3|4|5\",\"activeHours\":\"09:00|16:00\",\"activeHoursQueue\":null,\"blacklist\":{\"netflix.com\":{}},\"challengeRequired\":null,\"challengeText\":null,\"countdownForOutgoingLinks\":null,\"customStayFocusdMsg\":null,\"disableActivityMonitor\":null,\"disableSync\":null,\"disableUpdatePopup\":null,\"firstInstallDate\":\"Mon Dec 27 2021\",\"firstInstallAllowanceExpiration\":1640627724678,\"hideAllowSiteLink\":null,\"hideInfoBar\":null,\"maxTimeAllowed\":null,\"notificationSettings\":null,\"nuclearOptionSettings\":{\"activeDays\":[]},\"productivityBypass\":null,\"resetTimeQueue\":null,\"resetTimestamp\":1640667600000,\"resetTime\":\"00:00\",\"whitelist\":null}",
+        "sync_storageMap": "{\"backupKeys\":3,\"disableUpdatePopup\":3,\"isUpdated\":3,\"previousVersion\":3,\"outgoingLink\":3,\"blacklist\":2,\"whitelist\":2,\"backup-1640624194918\":3,\"backup-1640624196476\":3,\"backup-1640624198586\":3,\"backup-1640624199603\":3,\"backup-1640624202463\":3}",
+        "sync_blacklist": "{\"netflix.com\":{},\"reddit.com\":{},\"youtube.com\":{}}",
+        "backup-1640624194918": "{\"activeDays\":\"1|2|3|4|5\",\"activeHours\":\"09:00|16:00\",\"activeHoursQueue\":null,\"blacklist\":null,\"challengeRequired\":null,\"challengeText\":null,\"countdownForOutgoingLinks\":null,\"customStayFocusdMsg\":null,\"disableActivityMonitor\":null,\"disableSync\":null,\"disableUpdatePopup\":null,\"firstInstallDate\":\"Mon Dec 27 2021\",\"firstInstallAllowanceExpiration\":1640627724678,\"hideAllowSiteLink\":null,\"hideInfoBar\":null,\"maxTimeAllowed\":null,\"notificationSettings\":null,\"nuclearOptionSettings\":{\"activeDays\":[]},\"productivityBypass\":null,\"resetTimeQueue\":null,\"resetTimestamp\":1640667600000,\"resetTime\":\"00:00\",\"whitelist\":null}",
+        "backup-1640624199603": "{\"activeDays\":\"1|2|3|4|5\",\"activeHours\":\"09:00|16:00\",\"activeHoursQueue\":null,\"blacklist\":{\"netflix.com\":{},\"reddit.com\":{}},\"challengeRequired\":null,\"challengeText\":null,\"countdownForOutgoingLinks\":null,\"customStayFocusdMsg\":null,\"disableActivityMonitor\":null,\"disableSync\":null,\"disableUpdatePopup\":null,\"firstInstallDate\":\"Mon Dec 27 2021\",\"firstInstallAllowanceExpiration\":1640627724678,\"hideAllowSiteLink\":null,\"hideInfoBar\":null,\"maxTimeAllowed\":null,\"notificationSettings\":null,\"nuclearOptionSettings\":{\"activeDays\":[]},\"productivityBypass\":null,\"resetTimeQueue\":null,\"resetTimestamp\":1640667600000,\"resetTime\":\"00:00\",\"whitelist\":null}",
+        "backup-1640624198586": "{\"activeDays\":\"1|2|3|4|5\",\"activeHours\":\"09:00|16:00\",\"activeHoursQueue\":null,\"blacklist\":{\"netflix.com\":{}},\"challengeRequired\":null,\"challengeText\":null,\"countdownForOutgoingLinks\":null,\"customStayFocusdMsg\":null,\"disableActivityMonitor\":null,\"disableSync\":null,\"disableUpdatePopup\":null,\"firstInstallDate\":\"Mon Dec 27 2021\",\"firstInstallAllowanceExpiration\":1640627724678,\"hideAllowSiteLink\":null,\"hideInfoBar\":null,\"maxTimeAllowed\":null,\"notificationSettings\":null,\"nuclearOptionSettings\":{\"activeDays\":[]},\"productivityBypass\":null,\"resetTimeQueue\":null,\"resetTimestamp\":1640667600000,\"resetTime\":\"00:00\",\"whitelist\":null}",
+        "backupKeys": "[\"backup-1640624202463\",\"backup-1640624199603\",\"backup-1640624198586\",\"backup-1640624196476\",\"backup-1640624194918\"]"
+    }
+}
