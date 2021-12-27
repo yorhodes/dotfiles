@@ -4,7 +4,8 @@ config my life
 
 ## software
 
-![neofetch](./neofetch.png)
+![neofetch-light](./neofetch-light.png)
+![neofetch-dark](./neofetch-dark.png)
 
 ### installation
 
