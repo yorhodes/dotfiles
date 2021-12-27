@@ -47,6 +47,7 @@ yabai -m config window_gap                   5
 
 # float specific apps
 MATCH="^(System Preferences)|(Archive Utility)|(Finder)|(Messages)|(Contacts)|(Activity Monitor)|(WhatsApp)|(Telegram)|(Android Messages)|(Signal)|(Übersicht)|(Calendar)|(FaceTime)$"
-yabai -m rule --add app="$MATCH" manage=off sticky=on layer=above
+yabai -m rule --add app="MATCH" manage=off sticky=off layer=above opacity=1.0
+yabai -m rule --add title="Picture in Picture" manage=off sticky=off layer=above opacity=1.0
 
 echo "yabai configuration loaded..."
