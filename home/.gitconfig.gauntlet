@@ -1,5 +1,6 @@
 [user]
     email = yorke@gauntlet.network
+	signingkey = 393F9085
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

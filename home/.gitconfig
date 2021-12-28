@@ -9,12 +9,7 @@
 [color]
     ui = auto
 [init]
-    defaultBranch = trunk
-# conditional configurations for celo repos
-[includeIf "gitdir:~/celo/"]
-    path = ~/.gitconfig.celo
-[includeIf "gitdir:~/gauntlet/"]
-    path = ~/.gitconfig.gauntlet
+    defaultBranch = main
 [pull]
 	ff = only
 	rebase = true
@@ -26,3 +21,7 @@
 	default = current
 [commit]
     gpgsign = true
+[includeIf "gitdir:~/celo/"]
+    path = ~/.gitconfig.celo
+[includeIf "gitdir:~/gauntlet/"]
+    path = ~/.gitconfig.gauntlet
