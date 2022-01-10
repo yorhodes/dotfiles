@@ -5,7 +5,7 @@
     signingkey = 8C6573483BF95681
 [core]
     sshCommand = ssh -i ~/.ssh/id_ed25519
-    editor = code -w
+    editor = code --wait
 [color]
     ui = auto
 [init]

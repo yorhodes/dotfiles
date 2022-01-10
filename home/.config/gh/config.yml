@@ -9,7 +9,7 @@ pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
     co: pr checkout
-     # list my issues
+    # list my issues
     lmi: issue list --assignee "@me"
     # list my pull requests
     lmpr: pr list --author "@me"
