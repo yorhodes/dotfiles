@@ -22,6 +22,12 @@
 [commit]
     gpgsign = true
 [includeIf "gitdir:~/celo/"]
-    path = ~/.gitconfig.celo
+    path = ~/celo/.gitconfig
 [includeIf "gitdir:~/gauntlet/"]
-    path = ~/.gitconfig.gauntlet
+    path = ~/gauntlet/.gitconfig
+[includeIf "gitdir:~/abacus/"]
+    path = ~/abacus/.gitconfig
+[credential "https://github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
