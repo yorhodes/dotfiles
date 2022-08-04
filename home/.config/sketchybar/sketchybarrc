@@ -8,38 +8,31 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins" # Directory where all the plugin s
 
 FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 SPACE_CLICK_SCRIPT="yabai -m space --focus \$SID 2>/dev/null" # The script that is run for clicking on space components
-POPUP_CLICK_SCRIPT="sketchybar -m --set \"\$NAME\" popup.drawing=toggle" # The script that toggles the popup windows
 
-PADDINGS=3 # All paddings use this value (icon, label, background and bar paddings)
-SEGMENT_SPACING=13 # The spacing between segments
+PADDINGS=5 # All paddings use this value (icon, label, background and bar paddings)
 
 POPUP_BORDER_WIDTH=2
-POPUP_CORNER_RADIUS=3
+POPUP_CORNER_RADIUS=11
 
 SHADOW=off
-SHADOW_DISTANCE=3
-SHADOW_ANGLE=35
+
+BAR_HEIGHT=30
 
 # Setting up the general bar appearance and default values
-sketchybar --bar     height=27                                           \
-                     corner_radius=10                                    \
-                     border_width=0                                      \
+sketchybar --bar     height=$BAR_HEIGHT                                  \
                      margin=5                                            \
-                     blur_radius=0                                       \
+                     sticky=on                                           \
                      position=top                                        \
-                     padding_left=4                                      \
-                     padding_right=4                                     \
-                     color=$BAR_COLOR                                    \
-                     topmost=off                                         \
-                     font_smoothing=off                                  \
+                     padding_left=0                                      \
+                     padding_right=0                                     \
+                     color=$TRANSPARENT                                  \
                      y_offset=5                                          \
-                     shadow=off                                          \
-                     notch_width=0                                       \
+                     shadow=$SHADOW                                      \
                                                                          \
            --default drawing=on                                          \
                      updates=when_shown                                  \
-                     label.font="$FONT:Semibold:13.0"                    \
-                     icon.font="$FONT:Bold:14.0"                         \
+                     label.font="$FONT:Semibold:11.0"                    \
+                     icon.font="$FONT:Bold:11.0"                         \
                      icon.color=$ICON_COLOR                              \
                      label.color=$LABEL_COLOR                            \
                      icon.padding_left=$PADDINGS                         \
@@ -52,58 +45,46 @@ sketchybar --bar     height=27                                           \
                      popup.background.corner_radius=$POPUP_CORNER_RADIUS \
                      popup.background.border_color=$POPUP_BORDER_COLOR   \
                      popup.background.color=$POPUP_BACKGROUND_COLOR      \
-                     popup.background.shadow.drawing=$SHADOW             \
-                     popup.blur_radius=50                                \
-                     icon.shadow.color=$SHADOW_COLOR                     \
-                     icon.shadow.distance=$SHADOW_DISTANCE               \
-                     icon.shadow.angle=$SHADOW_ANGLE                     \
-                     icon.shadow.drawing=$SHADOW                         \
-                     label.shadow.color=$SHADOW_COLOR                    \
-                     label.shadow.distance=$SHADOW_DISTANCE              \
-                     label.shadow.angle=$SHADOW_ANGLE                    \
-                     label.shadow.drawing=$SHADOW
+                     popup.background.shadow.drawing=$SHADOW
 
-
-# Template for the segment labels, i.e. space name, active app, date, ...
-sketchybar --add item           label_template left                          \
-           --set label_template icon.drawing=off                             \
-                                label.font="$FONT:Black:12.0"                \
-                                label.padding_right=5                        \
-                                click_script="$PLUGIN_DIR/toggle_bracket.sh" \
-                                background.padding_left=$SEGMENT_SPACING     \
-                                background.padding_right=0                   \
-                                drawing=off
-
+# Left
 source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
-source "$ITEM_DIR/github.sh"
-source "$ITEM_DIR/network.sh"
-source "$ITEM_DIR/memory.sh"
+source "$ITEM_DIR/front_app.sh"
 
+# Right
+source "$ITEM_DIR/github.sh"
+source "$ITEM_DIR/mail.sh"
 source "$ITEM_DIR/calendar.sh"
-source "$ITEM_DIR/cpu.sh"
-source "$ITEM_DIR/system.sh"
-source "$ITEM_DIR/spotify.sh"
+# source "$ITEM_DIR/spotify.sh"
+# source "$ITEM_DIR/cpu.sh"
+
+
+ITEMS=$(sketchybar --query bar | jq -r '.items | .[]')
+
+LEFT_ITEMS=()
+RIGHT_ITEMS=()
+for item in $ITEMS
+do
+  POS=$(sketchybar --query ${item} | jq -r '.geometry.position')
+  if [ "$POS" = "left" ]; then
+    LEFT_ITEMS+=(${item})
+  elif [ "$POS" = "right" ]; then
+    RIGHT_ITEMS+=(${item})
+  fi
+done
+
+sketchybar --add bracket left_items ${LEFT_ITEMS[@]} \
+           --set left_items background.color=$BAR_COLOR \
+                            background.height=$BAR_HEIGHT \
+                            background.corner_radius=12
+
+sketchybar --add bracket right_items ${RIGHT_ITEMS[@]} \
+           --set right_items background.color=$BAR_COLOR \
+                             background.height=$BAR_HEIGHT \
+                             background.corner_radius=12
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update
 
-############## Animation ########################
-# sketchybar --animate sin 30 \
-#            --bar y_offset=0 \
-#                  notch_width=200 \
-#                  margin=0 \
-#                  shadow=on \
-#                  corner_radius=20 \
-#                  corner_radius=20 \
-#                  corner_radius=20 \
-#                  corner_radius=0 \
-#                  color=0x000000 \
-#                  color=0x000000 \
-#                  color=$BAR_COLOR \
-#                  blur_radius=0 \
-#                  blur_radius=0 \
-#                  blur_radius=0 \
-#                  blur_radius=50
-#
 echo "sketchybar configuation loaded.."

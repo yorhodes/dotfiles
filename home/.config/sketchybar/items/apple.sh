@@ -1,17 +1,17 @@
 #!/usr/bin/env sh
 
 POPUP_OFF="sketchybar --set apple.logo popup.drawing=off"
+POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
 
-sketchybar --add event lock     "com.apple.screenIsLocked"                  \
-           --add event unlock   "com.apple.screenIsUnlocked"                \
+sketchybar --add item           apple.logo left                             \
                                                                             \
-           --add item           apple.logo left                             \
            --set apple.logo     icon=$APPLE                                 \
                                 icon.font="$FONT:Black:16.0"                \
                                 icon.color=$GREEN                           \
+                                background.padding_left=10                  \
+                                background.padding_right=25                 \
                                 label.drawing=off                           \
-                                                                            \
-           --subscribe          apple.logo lock unlock                      \
+                                click_script="$POPUP_CLICK_SCRIPT"          \
                                                                             \
            --add item           apple.prefs popup.apple.logo                \
            --set apple.prefs    icon=$PREFERENCES                           \

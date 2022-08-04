@@ -13,7 +13,7 @@ update() {
     args+=(--set $NAME icon=$BELL_DOT label="$COUNT")
   fi
 
-  PREV_COUNT=$(sketchybar --query github.bell | jq -r .text.label)
+  PREV_COUNT=$(sketchybar --query github.bell | jq -r .label.value)
   # For sound to play around with:
   # afplay /System/Library/Sounds/Morse.aiff
 
