@@ -3,12 +3,12 @@
 sketchybar --add item     calendar right               \
            --set calendar update_freq=15               \
                           icon=cal                     \
-                          icon.color=$BLACK            \
+                          icon.color=$ICON_COLOR       \
                           icon.font="$FONT:Black:11.0" \
                           icon.padding_left=15         \
                           label.width=55               \
                           label.align=right            \
-                          label.color=$BLACK           \
+                          label.color=$LABEL_COLOR     \
                           label.padding_right=15       \
                           align=center                 \
                           script="$PLUGIN_DIR/time.sh" \
