@@ -1,7 +1,7 @@
 # common and fallback configurations
 [user]
-    name = yorhodes
-    email = yorkerhodesiv@gmail.com
+	name = Yorke Rhodes
+	email = email@yorke.dev
     signingkey = 8C6573483BF95681
 [core]
     sshCommand = ssh -i ~/.ssh/id_ed25519
@@ -20,14 +20,21 @@
 [push]
 	default = current
 [commit]
-    gpgsign = true
+	gpgsign = true
 [includeIf "gitdir:~/celo/"]
     path = ~/celo/.gitconfig
 [includeIf "gitdir:~/gauntlet/"]
     path = ~/gauntlet/.gitconfig
-[includeIf "gitdir:~/abacus/"]
-    path = ~/abacus/.gitconfig
+[includeIf "gitdir:~/hyperlane/"]
+    path = ~/hyperlane/.gitconfig
 [credential "https://github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[status]
+	submoduleSummary = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
