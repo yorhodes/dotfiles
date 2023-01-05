@@ -1,10 +1,10 @@
-#!/usr/bin/env sh
-
-sudo yabai --load-sa
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+#!/usr/bin/env bash
 
 # status bar
-yabai -m config external_bar all:0:0
+# source "~/.displaysrc"
+
+NORMAL_BAR_PADDING=33
+yabai -m config external_bar all:$NORMAL_BAR_PADDING:0;
 
 # global settings
 yabai -m config mouse_follows_focus          on
@@ -16,15 +16,24 @@ yabai -m config window_topmost               off
 yabai -m config window_opacity               on
 # yabai -m config window_opacity_duration      1.0
 yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.85
+yabai -m config normal_window_opacity        0.8
 
 # modify window shadows (default: on, options: on, off, float)
-yabai -m config window_shadow                on
+yabai -m config window_shadow                off
+
+yabai -m config window_animation_duration    0.0
+yabai -m config window_opacity_duration      0.25
+yabai -m config window_animation_frame_rate  120
 
 # window border (default: off)
 yabai -m config window_border                off
+
+yabai -m config window_border_blur           on
+yabai -m config window_border_radius         3
+
 # - width has unit 1pt
-yabai -m config window_border_width          3
+yabai -m config window_border_width          1
+
 # - colors for borders are in the format AARRGGBB (alpha, red, green, blue) 
 #    as a hexadecimal value
 # - active means focused window, normal means unfocused window, 
@@ -39,15 +48,22 @@ yabai -m config mouse_action2                resize
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config bottom_padding               0
+yabai -m config bottom_padding               5
 yabai -m config top_padding                  5
 yabai -m config left_padding                 5
 yabai -m config right_padding                5
 yabai -m config window_gap                   5
 
 # float specific apps
-MATCH="^(System Preferences)|(Archive Utility)|(Finder)|(Messages)|(Contacts)|(Activity Monitor)|(WhatsApp)|(Telegram)|(Android Messages)|(Signal)|(Übersicht)|(Calendar)|(FaceTime)$"
-yabai -m rule --add app="MATCH" manage=off sticky=off layer=above opacity=1.0
-yabai -m rule --add title="Picture in Picture" manage=off sticky=off layer=above opacity=1.0
+APP_MATCH="^(System Preferences)|(Archive Utility)|(Finder)|(Messages)|(Google Messages)|(Messenger)|(Contacts)|(WhatsApp)|(Signal)|(Calendar)|(Activity Monitor)|(FaceTime)$"
+yabai -m rule --add app="$APP_MATCH" manage=off sticky=off layer=above opacity=1.0
+
+# unmanage specific apps
+UNMANAGE_APPS="Frame"
+yabai -m rule --add app="$UNMANAGE_APPS" manage=off sticky=off
+
+# sticky specific windows
+TITLE_MATCH="(Picture in Picture)|(video call)|(FaceTime)|(1Password)"
+yabai -m rule --add title="$TITLE_MATCH" manage=off sticky=on layer=above opacity=1.0
 
 echo "yabai configuration loaded..."
